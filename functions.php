@@ -32,3 +32,18 @@ function dl_registrar_menu(){
 }
 
 add_action('init', 'dl_registrar_menu');
+
+function dl_registrar_taxonomia(){
+    $labels = [
+        'name'=> "Localizações",
+        'singular_name' => "Localização",
+        'edit_item' => "Editar Localização",
+        "add_new_item" => "Adicionar nova localização"
+    ];
+    register_taxonomy("localizacao", "imovel", [
+        'labels' => $labels,
+        "public" => true,
+        "hierarchical" => true
+    ]);
+}
+add_action('init', 'dl_registrar_taxonomia');
