@@ -6,9 +6,12 @@
         <h1>Maluras</h1>
         <ul class="imoveis-listagem">
             <?php
-            if (have_posts()):
-                while (have_posts()):
-                    the_post();
+            $args = ['post_type' => 'imovel'];
+            $loop = new WP_Query($args);
+
+            if ($loop->have_posts()):
+                while ($loop->have_posts()):
+                    $loop->the_post();
                     ?>
                     <li class="imoveis-listagem-item">
                         <h2><?php the_title(); ?></h2>
