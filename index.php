@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<h1>INDEX</h1>
 
 <main class="home-main">
     <div class="container">
@@ -14,9 +15,11 @@
                     $loop->the_post();
                     ?>
                     <li class="imoveis-listagem-item">
+                        <a href="<?php the_permalink(); ?>">
                         <h2><?php the_title(); ?></h2>
                         <?php the_post_thumbnail(); ?>
                         <p><?php the_content(); ?></p>
+                        </a>
                     </li>
                 <?php
                 endwhile;
