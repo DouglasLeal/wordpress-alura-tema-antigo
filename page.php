@@ -16,4 +16,8 @@
         </article>
     </main>
 
+    <?php if(is_page('contato')): ?>
+        <h2>Formulário</h2>
+    <?php endif; ?>
+
 <?php get_footer(); ?>
