@@ -11,5 +11,10 @@
 </head>
 <body>
 
-header
+<?php
+$args = [
+        'theme_location' => 'header-menu'
+];
+wp_nav_menu($args);
+?>
 <hr>

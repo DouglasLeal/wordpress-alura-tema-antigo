@@ -26,3 +26,9 @@ function dl_cadastrando_post_type_imoveis(){
     register_post_type('imovel', $args);
 }
 add_action('init', "dl_cadastrando_post_type_imoveis");
+
+function dl_registrar_menu(){
+    register_nav_menu('header-menu', 'main-menu');
+}
+
+add_action('init', 'dl_registrar_menu');
